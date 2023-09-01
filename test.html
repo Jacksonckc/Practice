@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jackson</title>
+  </head>
+  <body>
+    <nav>
+      <button id="button" onclick="showLis()">*</button>
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+      </ul>
+    </nav>
+  </body>
+</html>
+
+<style>
+    #button{
+        display: none;
+    }
+  ul{
+      display: flex;
+  }
+  li{
+    list-style: none;
+    margin: 10px;
+    padding: 20px 100px;
+    background-color: aqua;
+  }
+  @media screen and (max-width: 1200px) {
+    ul {
+        display: none;
+        width: 100px;
+        position: absolute;
+        right: 120px;
+      }
+
+      #button{
+        display: block;
+        margin-left: auto;
+      }
+    .customized{
+        display: block;
+    }
+  }
+</style>
+<script>
+  const showLis = ()=>{
+    document.querySelector("ul").classList.toggle("customized")
+  }
+</script>
